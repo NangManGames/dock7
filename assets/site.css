@@ -120,7 +120,10 @@ html[lang="ko"] .slip h2 { letter-spacing: .3em }
 
 /* 스크린샷 */
 .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px }
+.shot { margin: 0 }
+.shot a { display: block }
 .shot img { width: 100%; height: auto; border: 1px solid var(--line); transition: transform .12s, border-color .12s }
+.shot figcaption { margin-top: 4px; line-height: 1.45 }
 .shot:hover img { transform: translateY(-2px); border-color: var(--sun) }
 
 /* 로고와 키 아트 */
@@ -154,6 +157,16 @@ html[lang="ko"] .slip h2 { letter-spacing: .3em }
 
 .acts { display: flex; gap: 8px; flex-wrap: wrap }
 .sw-h { margin-top: 32px; color: var(--soft); font-size: 14px }
+.sub-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: 36px }
+.sub-head h3 { margin: 0; color: var(--soft); font-size: 14px }
+.cutouts { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px }
+.cutouts figure { margin: 0 }
+.cutouts img { width: 100%; height: 200px; object-fit: contain; image-rendering: pixelated; border: 1px solid var(--line); padding: 12px;
+  background: repeating-conic-gradient(#151c2e 0% 25%, #1b2338 0% 50%) 0 0/16px 16px }
+.cutouts figcaption { display: flex; flex-direction: column; margin-top: 4px; font-size: 13px }
+.stream p { margin: 0 0 8px }
+.stream p:first-child { font-size: 18px; color: var(--ink) }
+.stream p:last-child { margin: 0; color: var(--soft) }
 .swatches { display: flex; flex-wrap: wrap; gap: 10px }
 .sw { display: grid; grid-template-columns: 34px auto; grid-template-rows: auto auto; column-gap: 10px; align-items: center; text-align: left;
   background: var(--card); border: 1px solid var(--line); color: var(--ink); padding: 8px 12px 8px 8px; cursor: pointer; font: 13px/1.3 var(--body) }
@@ -171,7 +184,9 @@ footer p { margin: 4px 0 }
 /* 크게 보기 */
 .lb { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(5, 8, 16, .94); padding: 48px 56px }
 .lb[hidden] { display: none }
-.lb img { max-width: 100%; max-height: 100%; image-rendering: pixelated; border: 1px solid var(--line2) }
+.lb figure { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; gap: 8px }
+.lb img { max-width: 100%; max-height: calc(100vh - 140px); image-rendering: pixelated; border: 1px solid var(--line2) }
+.lb-c { color: var(--ink); font-size: 15px; text-align: center }
 .lb button, .lb-d { position: absolute; font: 28px/1 var(--px); color: var(--ink); background: none; border: 0; cursor: pointer; padding: 10px 14px }
 .lb-x { top: 6px; right: 8px }
 .lb-p { left: 4px; top: 50% }

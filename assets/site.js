@@ -62,6 +62,7 @@
     at = (n + shots.length) % shots.length;
     lb.querySelector('img').src = shots[at].href;
     lb.querySelector('.lb-d').href = shots[at].href;
+    lb.querySelector('.lb-c').textContent = shots[at].dataset.cap || '';
   };
   const close = () => { lb.hidden = true; document.body.style.overflow = ''; back && back.focus(); };
   shots.forEach((a, n) => a.addEventListener('click', e => {
