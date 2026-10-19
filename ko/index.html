@@ -5,110 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dock 7 — 프레스 킷</title>
 <meta name="description" content="버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임. 타이머도 빚도 게임 오버도 없어요. 라디오를 틀어 놓고 느긋하게 자르고, 주워 온 물건과 구해 온 식구들로 작은 도크를 채워 가요.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Dock 7 — 프레스 킷">
 <meta property="og:description" content="버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임. 타이머도 빚도 게임 오버도 없어요. 라디오를 틀어 놓고 느긋하게 자르고, 주워 온 물건과 구해 온 식구들로 작은 도크를 채워 가요.">
 <meta property="og:image" content="https://nangmangames.github.io/dock7/img/art/header_920x430.jpg">
+<meta property="og:url" content="https://nangmangames.github.io/dock7/ko/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d1220">
 <link rel="icon" href="../img/logo/nangmangames_mark_64.png">
 <link rel="alternate" hreflang="en" href="../">
 <link rel="alternate" hreflang="ko" href="../ko/">
-<style>
-:root { --bg:#10141f; --card:#171d2c; --line:#2a3247; --ink:#ece3cf; --soft:#a69f91; --sun:#ffc658; --orange:#ff8a50; --pink:#ff5f7a }
-* { box-sizing:border-box }
-html { background:var(--bg) }
-body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif }
-a { color:var(--sun) }
-img, video, iframe { display:block; max-width:100% }
-.hero { position:relative; min-height:min(62vw, 560px); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding:32px 16px 40px;
-  background:linear-gradient(to bottom, rgba(16,20,31,.15), rgba(16,20,31,.2) 55%, var(--bg)), url("../img/art/library_hero_3840x1240.jpg") center/cover }
-.hero .logo { width:min(560px, 86vw); image-rendering:pixelated; filter:drop-shadow(0 4px 0 rgba(0,0,0,.35)) }
-.hero .lead { max-width:720px; text-align:center; margin:18px 0 22px; text-shadow:0 2px 6px rgba(0,0,0,.8) }
-.lang { position:absolute; top:14px; right:16px; color:var(--ink); background:rgba(16,20,31,.7); padding:4px 10px; border-radius:3px; text-decoration:none; font-size:14px }
-.btns { display:flex; gap:10px; flex-wrap:wrap; justify-content:center }
-.btn { display:inline-block; padding:10px 18px; border:2px solid var(--ink); border-radius:3px; color:var(--ink); text-decoration:none; font-weight:600; background:rgba(16,20,31,.6) }
-.btn.main { background:var(--orange); border-color:var(--orange); color:#1a1209 }
-.btn small { font-weight:400; opacity:.75 }
-main { max-width:1120px; margin:0 auto; padding:0 16px 64px }
-.top { display:grid; grid-template-columns:minmax(0, 320px) minmax(0, 1fr); gap:40px; align-items:start }
-@media (max-width:820px) { .top { grid-template-columns:minmax(0, 1fr) } }
-aside { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:18px 20px }
-dl { margin:0; display:grid; grid-template-columns:auto minmax(0, 1fr); gap:6px 14px; font-size:14px }
-dt { color:var(--soft) }
-dd { margin:0 }
-aside h2 { margin-top:22px }
-aside h2:first-child { margin-top:0 }
-aside ul { margin:0; padding-left:18px }
-h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--sun); margin:56px 0 14px; border-bottom:1px solid var(--line); padding-bottom:6px }
-.top h2 { margin-top:0 }
-html[lang="ko"] h2 { letter-spacing:.04em }
-article h3 { font-size:18px; margin:26px 0 6px; color:var(--ink) }
-article p, article li { color:#d8cfbb }
-.sub, .note, figcaption, .muted { color:var(--soft); font-size:14px }
-.frame { width:100%; aspect-ratio:16/9; border:0; background:#000 }
-.shots { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:10px }
-.shots img { width:100%; height:auto; border-radius:2px }
-.clips { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:10px }
-.clips figure { margin:0 }
-.clips video { width:100%; border-radius:2px; background:#000 }
-.art { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:18px }
-.art figure { margin:0 }
-.art img { width:100%; height:170px; object-fit:contain; background:var(--card); border:1px solid var(--line); border-radius:3px; padding:10px; image-rendering:pixelated }
-.art figure.light img { background:#f3eee2 }
-.art figure.photo img { object-fit:cover; padding:0; image-rendering:auto }
-.dev { max-width:720px }
-.mail { font-size:20px; font-weight:600 }
-footer { border-top:1px solid var(--line); padding:20px 16px 40px; text-align:center; color:var(--soft); font-size:13px }
-footer img { width:120px; margin:0 auto 10px }
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.39.3/dist/galmuri.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js" defer></script>
 </head>
 <body>
-<header class="hero">
+<nav class="bar" aria-label="프레스 킷">
+  <a class="brand" href="#top"><img src="../img/logo/nangmangames_mark_64.png" alt="">Dock 7 <span>프레스 킷</span></a>
+  <div class="jump"><a href="#facts">사실 표</a><a href="#game">게임</a><a href="#teaser">티저</a><a href="#shots">스크린샷</a><a href="#art">로고</a><a href="#studio">스튜디오</a><a href="#contact">연락</a></div>
   <a class="lang" href="../" hreflang="en">English</a>
-  <img class="logo" src="../img/logo/dock7_logo.png" alt="Dock 7">
-  <p class="lead">버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임. 타이머도 빚도 게임 오버도 없어요. 라디오를 틀어 놓고 느긋하게 자르고, 주워 온 물건과 구해 온 식구들로 작은 도크를 채워 가요.</p>
-  <div class="btns"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam 위시리스트에 담기</a><a class="btn" href="../dock7_presskit.zip" download>한꺼번에 받기 <small>zip · 65 MB</small></a></div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="sky" style="background-image:url(../img/art/library_hero_3840x1240.jpg)"></div>
+  <img class="logo" src="../img/logo/dock7_logo.png" alt="Dock 7" width="1280" height="420">
+  <p class="lead">버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임.</p>
+  <div class="btns"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam 위시리스트에 담기</a><a class="btn" href="#teaser">티저 보기</a><a class="btn" href="../dock7_presskit.zip" download title="스크린샷, 로고, 키 아트, 사실 표">한꺼번에 받기 <small>zip · 65 MB</small></a></div>
 </header>
+
 <main>
-  <div class="top">
-    <aside>
-      <h2>사실 표</h2>
-      <dl><dt>개발</dt><dd>NangmanGames (1인 스튜디오)</dd><dt>나라</dt><dd>대한민국</dd><dt>플랫폼</dt><dd>Windows PC (Steam)</dd><dt>데모</dt><dd>2026년 12월</dd><dt>Steam 넥스트 페스트</dt><dd>2027년 2월</dd><dt>앞서 해보기</dt><dd>2027년 1분기</dd><dt>가격</dt><dd>미정</dd><dt>언어</dt><dd>한국어, 영어</dd><dt>인원</dt><dd>1인용</dd><dt>장르</dt><dd>코지 우주선 해체, 2D 픽셀 아트</dd><dt>생성형 AI</dt><dd>그림·소리·번역에 썼습니다 (Steam 페이지에 공개)</dd></dl>
-      <h2>연락</h2>
-      <p class="mail"><a href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a></p>
-      <h2>링크</h2>
-      <ul><li><a href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam</a></li><li><a href="https://x.com/NangManGames">X</a></li><li><a href="https://www.youtube.com/@NangManGames">YouTube</a></li><li><a href="https://www.tiktok.com/@nangmangames">TikTok</a></li></ul>
-    </aside>
-    <article>
-      <h2>게임 소개</h2>
-      <p>작은 해체 정거장, Dock 7. 당신은 여기서 고양이 한 마리와 지내는 프리랜서 해체업자예요. 게시판에서 폐함 한 척을 고르고, 인양함을 몰고 나가, 쓸 만한 것을 건져 돌아와요. 급할 건 하나도 없어요. 산소는 넉넉하고, 갚을 빚도 없고, 작업선은 터지지 않으니까요.</p><h3>한 겹씩, 천천히</h3><p>작은 작업선을 타고 폐함 위를 떠다니며 레이저로 그어요. 닿은 자리는 녹아서 열리고, 빙 둘러 오려낸 외판은 툭 하고 떨어져 나가 떠다녀요. 외판 아래에는 배선과 설비가, 그 아래에는 누군가 지내던 방이 있어요. 레이저는 지금 누른 층만 자르니까 아래 것을 태울 걱정 없이 마음껏 그어도 돼요.</p><h3>건진 건 눈에 보여요</h3><p>떠다니는 판과 부품은 트랙터빔으로 끌어와 작업선 뒤의 견인망에 담아요. 견인망은 담은 만큼 부풀어 오르고, 인양함 곁으로 가면 담긴 것이 줄줄이 넘어가 속이 비치는 스토리지에 쌓여요. 오늘 얼마나 건졌는지는 숫자가 아니라 쌓인 모양으로 알 수 있어요.</p><h3>이 배엔 뭐가 남아 있을까</h3><p>스캐너를 들면 외판 아래가 비쳐 보여요. 값나가는 부품도 좋지만, 진짜 반가운 건 전 주인이 두고 간 작은 물건들이에요. 낡은 머그잔, 뜨다 만 목도리, 병 속의 범선. 처음 건진 유실물은 팔지 않고 진열대에 올려 둬요. 화분은 조금씩 자라 꽃을 피우고, 휴대용 라디오를 건지면 새 채널이 잡혀요.</p><h3>배마다 사연이 있어요</h3><p>폐함은 의뢰마다 새로 만들어지고, 지나온 일이 그대로 남아 있어요. 그을린 선체, 덧칠로 지운 옛 이름, 두 사람 몫이 차려진 채인 식탁, 누가 구리판에 그려 놓은 웃는 얼굴. 무슨 일이 있었는지는 아무도 말해 주지 않아요. 한 겹씩 벗기다 보면 짐작이 갈 뿐이에요.</p><h3>도크의 저녁</h3><p>돌아오면 건져 온 것의 값을 받고, 저녁이 돼요. 새 유실물이 진열대에 놓이면 고양이가 와서 들여다봐요. 라디오 채널을 돌리고, 식구들 방에 들르고, 고양이를 쓰다듬다가 하루를 마무리하면 다음 날 아침이 와요.</p><h3>식구가 늘어요</h3><p>가끔 통신에 구조 신호가 잡혀요. 폐함에 남겨진 구조 캡슐을 건져 오면 도크에 식구가 한 명씩 늘어요. 공방을 여는 사람, 연구실을 맡는 사람, 라디오에서 곡을 소개해 주는 사람. 저마다 제 방이 있고, 친해지면 그 사람의 곡이 담긴 테이프가 생겨요.</p><h3>Dock 7이 우리 집이에요</h3><p>번 돈으로 작업선을 손보고, 공방에서 새 도구와 모듈을 만들어요. 건져 온 자재로는 도크에 공사를 걸어요. 방마다 벽과 등불, 전구 줄을 고르고, 유실물은 마음에 드는 창턱으로 옮겨 놓아요. 꾸민다고 수치가 오르지는 않아요. 그렇게 조금씩 우리 집이 되는 거예요.</p><h3>이런 게임이에요</h3><ul><li>레이저로 한 겹씩 벗겨 내는 해체</li><li>타이머, 빚, 게임 오버 없음</li><li>의뢰마다 새로 만들어지는, 사연 있는 폐함</li><li>유실물 진열과 도감, 방 꾸밈</li><li>로파이 라디오와 모으는 테이프</li><li>어디서나 켜는 사진 모드</li><li>쓸모는 없지만 울릴 수 있는 경적</li><li>고양이</li></ul><h3>고양이 이름을 지어 주세요</h3><p>Dock 7에는 처음부터 고양이가 한 마리 살아요. 하는 일은 없어요. 이름은 당신이 지어 주면 돼요. 위시리스트에 넣어 두고, 그때까지 천천히 생각해 보세요.</p>
-    </article>
-  </div>
+  <section id="facts" class="glance">
+    <div class="facts">
+      <div class="slip">
+        <div class="paper">
+          <div class="slip-head"><h2 aria-label="사실 표">인양 정산서</h2><button class="copy" type="button" data-copy="t-facts" data-done="복사했어요">사실 표 복사</button></div>
+          <p class="slip-sub">Dock 7 · 사실 표</p>
+          <dl><div><dt>개발</dt><dd>NangmanGames (1인 스튜디오)</dd></div><div><dt>나라</dt><dd>대한민국</dd></div><div><dt>플랫폼</dt><dd>Windows PC (Steam)</dd></div><div><dt>데모</dt><dd>2026년 12월</dd></div><div><dt>Steam 넥스트 페스트</dt><dd>2027년 2월</dd></div><div><dt>앞서 해보기</dt><dd>2027년 1분기</dd></div><div><dt>데모 길이</dt><dd>60~90분쯤 (예정)</dd></div><div><dt>가격</dt><dd>미정</dd></div><div><dt>언어</dt><dd>한국어, 영어 (일본어·중국어 준비 중)</dd></div><div><dt>인원</dt><dd>1인용</dd></div><div><dt>조작</dt><dd>키보드와 마우스</dd></div><div><dt>장르</dt><dd>코지 우주선 해체, 2D 픽셀 아트</dd></div><div><dt>생성형 AI</dt><dd>그림·소리·번역에 썼습니다 (Steam 페이지에 공개)</dd></div></dl>
+          <svg class="stamp" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="35" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="40" cy="40" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="40" y="45" text-anchor="middle" font-size="22">D7</text><text x="40" y="60" text-anchor="middle" font-size="8">확인</text></svg>
+        </div>
+        <div class="register"><span class="no">No.0007</span><span>사실 표</span></div>
+      </div>
+      <div class="sl"><a href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam</a><a href="https://x.com/NangManGames">X</a><a href="https://www.youtube.com/@NangManGames">YouTube</a><a href="https://www.tiktok.com/@nangmangames">TikTok</a></div>
+    </div>
+    <div class="pitch">
+      <div class="head"><h2>한 문단 소개</h2><button class="copy" type="button" data-copy="t-short" data-done="복사했어요">복사</button></div>
+      <p class="big">버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임. 타이머도 빚도 게임 오버도 없어요. 라디오를 틀어 놓고 느긋하게 자르고, 주워 온 물건과 구해 온 식구들로 작은 도크를 채워 가요.</p>
+      <h3>이런 게임이에요</h3><ul class="feats"><li>레이저로 한 겹씩 벗겨 내는 해체</li><li>타이머, 빚, 게임 오버 없음</li><li>의뢰마다 새로 만들어지는, 사연 있는 폐함</li><li>유실물 진열과 도감, 방 꾸밈</li><li>로파이 라디오와 모으는 테이프</li><li>어디서나 켜는 사진 모드</li><li>쓸모는 없지만 울릴 수 있는 경적</li><li>고양이</li></ul>
+    </div>
+  </section>
 
-  <h2>티저</h2>
-  <video class="frame" controls preload="metadata" poster="../img/art/main_1232x706.jpg" src="../video/dock7_teaser.mp4"></video><p class="sub"><a href="../video/dock7_teaser.mp4" download>티저 받기 (mp4)</a> · 49 MB</p>
+  
+  <section id="game">
+    <div class="head"><h2>게임 소개</h2><span class="acts"><a class="copy" href="../dock7_gifs.zip" download>GIF 모두 · zip 20 MB</a><button class="copy" type="button" data-copy="t-about" data-done="복사했어요">소개 글 전체 복사</button></span></div>
+    <div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_intro.webm" poster="../video/store_intro.jpg"></video><figcaption><a href="../gif/dock7_intro.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><p>작은 해체 정거장, Dock 7. 당신은 여기서 고양이 한 마리와 지내는 프리랜서 해체업자예요. 게시판에서 폐함 한 척을 고르고, 인양함을 몰고 나가, 쓸 만한 것을 건져 돌아와요. 급할 건 하나도 없어요. 산소는 넉넉하고, 갚을 빚도 없고, 작업선은 터지지 않으니까요.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_cut.webm" poster="../video/store_cut.jpg"></video><figcaption><a href="../gif/dock7_cut.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><h3>한 겹씩, 천천히</h3><p>작은 작업선을 타고 폐함 위를 떠다니며 레이저로 그어요. 닿은 자리는 녹아서 열리고, 빙 둘러 오려낸 외판은 툭 하고 떨어져 나가 떠다녀요. 외판 아래에는 배선과 설비가, 그 아래에는 누군가 지내던 방이 있어요. 레이저는 지금 누른 층만 자르니까 아래 것을 태울 걱정 없이 마음껏 그어도 돼요.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_haul.webm" poster="../video/store_haul.jpg"></video><figcaption><a href="../gif/dock7_haul.gif" download>GIF</a> · 1 MB</figcaption></figure><div class="words"><h3>건진 건 눈에 보여요</h3><p>떠다니는 판과 부품은 트랙터빔으로 끌어와 작업선 뒤의 견인망에 담아요. 견인망은 담은 만큼 부풀어 오르고, 인양함 곁으로 가면 담긴 것이 줄줄이 넘어가 속이 비치는 스토리지에 쌓여요. 오늘 얼마나 건졌는지는 숫자가 아니라 쌓인 모양으로 알 수 있어요.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_finds.webm" poster="../video/store_finds.jpg"></video><figcaption><a href="../gif/dock7_finds.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><h3>이 배엔 뭐가 남아 있을까</h3><p>스캐너를 들면 외판 아래가 비쳐 보여요. 값나가는 부품도 좋지만, 진짜 반가운 건 전 주인이 두고 간 작은 물건들이에요. 낡은 머그잔, 뜨다 만 목도리, 병 속의 범선. 처음 건진 유실물은 팔지 않고 진열대에 올려 둬요. 화분은 조금씩 자라 꽃을 피우고, 휴대용 라디오를 건지면 새 채널이 잡혀요.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_wrecks.webm" poster="../video/store_wrecks.jpg"></video><figcaption><a href="../gif/dock7_wrecks.gif" download>GIF</a> · 3 MB</figcaption></figure><div class="words"><h3>배마다 사연이 있어요</h3><p>폐함은 의뢰마다 새로 만들어지고, 지나온 일이 그대로 남아 있어요. 그을린 선체, 덧칠로 지운 옛 이름, 두 사람 몫이 차려진 채인 식탁, 누가 구리판에 그려 놓은 웃는 얼굴. 무슨 일이 있었는지는 아무도 말해 주지 않아요. 한 겹씩 벗기다 보면 짐작이 갈 뿐이에요.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_evening.webm" poster="../video/store_evening.jpg"></video><figcaption><a href="../gif/dock7_evening.gif" download>GIF</a> · 909 KB</figcaption></figure><div class="words"><h3>도크의 저녁</h3><p>돌아오면 건져 온 것의 값을 받고, 저녁이 돼요. 새 유실물이 진열대에 놓이면 고양이가 와서 들여다봐요. 라디오 채널을 돌리고, 식구들 방에 들르고, 고양이를 쓰다듬다가 하루를 마무리하면 다음 날 아침이 와요.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_crew.webm" poster="../video/store_crew.jpg"></video><figcaption><a href="../gif/dock7_crew.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><h3>식구가 늘어요</h3><p>가끔 통신에 구조 신호가 잡혀요. 폐함에 남겨진 구조 캡슐을 건져 오면 도크에 식구가 한 명씩 늘어요. 공방을 여는 사람, 연구실을 맡는 사람, 라디오에서 곡을 소개해 주는 사람. 저마다 제 방이 있고, 친해지면 그 사람의 곡이 담긴 테이프가 생겨요.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_dock.webm" poster="../video/store_dock.jpg"></video><figcaption><a href="../gif/dock7_dock.gif" download>GIF</a> · 6 MB</figcaption></figure><div class="words"><h3>Dock 7이 우리 집이에요</h3><p>번 돈으로 작업선을 손보고, 공방에서 새 도구와 모듈을 만들어요. 건져 온 자재로는 도크에 공사를 걸어요. 방마다 벽과 등불, 전구 줄을 고르고, 유실물은 마음에 드는 창턱으로 옮겨 놓아요. 꾸민다고 수치가 오르지는 않아요. 그렇게 조금씩 우리 집이 되는 거예요.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="../video/store_cat.webm" poster="../video/store_cat.jpg"></video><figcaption><a href="../gif/dock7_cat.gif" download>GIF</a> · 397 KB</figcaption></figure><div class="words"><h3>고양이 이름을 지어 주세요</h3><p>Dock 7에는 처음부터 고양이가 한 마리 살아요. 하는 일은 없어요. 이름은 당신이 지어 주면 돼요. 위시리스트에 넣어 두고, 그때까지 천천히 생각해 보세요.</p></div></div>
+  </section>
 
-  <h2>스크린샷</h2>
-  <p class="muted">1920×1080 PNG. 누르면 원본이 열립니다.</p>
-  <div class="shots"><a href="../img/screens/ko/screenshot_01.png"><img src="../img/screens/ko/thumb/screenshot_01.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_02.png"><img src="../img/screens/ko/thumb/screenshot_02.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_03.png"><img src="../img/screens/ko/thumb/screenshot_03.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_04.png"><img src="../img/screens/ko/thumb/screenshot_04.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_05.png"><img src="../img/screens/ko/thumb/screenshot_05.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_06.png"><img src="../img/screens/ko/thumb/screenshot_06.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_07.png"><img src="../img/screens/ko/thumb/screenshot_07.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="../img/screens/ko/screenshot_08.png"><img src="../img/screens/ko/thumb/screenshot_08.jpg" alt="" loading="lazy" width="960" height="540"></a></div>
+  <section id="teaser">
+    <div class="head"><h2>티저</h2></div>
+    <div class="screen"><button class="facade" type="button" data-yt="hidHpr-TY1s" aria-label="티저 틀기" style="background-image:url(../img/art/main_1232x706.jpg)"><span class="play"></span></button></div>
+    <p class="sub"><a href="https://www.youtube.com/watch?v=hidHpr-TY1s">유튜브에서 보기</a> · <a href="../video/dock7_teaser.mp4" download>mp4 받기</a> · 49 MB</p>
+  </section>
 
-  <h2>짧은 영상</h2>
-  <p class="muted">Steam 페이지의 소리 없는 반복 영상입니다. 하나씩 GIF로도 받을 수 있습니다.</p>
-  <div class="clips"><figure><video src="../video/store_cut.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_cut.gif" download>GIF</a> · 2 MB</figcaption></figure><figure><video src="../video/store_haul.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_haul.gif" download>GIF</a> · 1 MB</figcaption></figure><figure><video src="../video/store_finds.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_finds.gif" download>GIF</a> · 2 MB</figcaption></figure><figure><video src="../video/store_wrecks.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_wrecks.gif" download>GIF</a> · 3 MB</figcaption></figure><figure><video src="../video/store_evening.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_evening.gif" download>GIF</a> · 909 KB</figcaption></figure><figure><video src="../video/store_crew.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_crew.gif" download>GIF</a> · 2 MB</figcaption></figure><figure><video src="../video/store_dock.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_dock.gif" download>GIF</a> · 6 MB</figcaption></figure><figure><video src="../video/store_cat.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_cat.gif" download>GIF</a> · 397 KB</figcaption></figure><figure><video src="../video/store_intro.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="../gif/dock7_intro.gif" download>GIF</a> · 2 MB</figcaption></figure></div>
+  <section id="shots">
+    <div class="head"><h2>스크린샷</h2><a class="copy" href="../dock7_presskit.zip" download>스크린샷 전부는 zip에 있습니다 · 65 MB</a></div>
+    <p class="muted">1920×1080 PNG, 워터마크 없음. 누르면 크게 보고, 화살표 키로 넘깁니다.</p>
+    <div class="shots"><a class="shot" href="../img/screens/ko/dock7_ko_01.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_01.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_02.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_02.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_03.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_03.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_04.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_04.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_05.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_05.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_06.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_06.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_07.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_07.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="../img/screens/ko/dock7_ko_08.png" data-lb><img src="../img/screens/ko/thumb/dock7_ko_08.jpg" alt="" loading="lazy" width="960" height="540"></a></div>
+  </section>
 
-  <h2>로고와 키 아트</h2>
-  <div class="art"><figure class=""><a href="../img/logo/dock7_logo.png"><img src="../img/logo/dock7_logo.png" alt="" loading="lazy"></a><figcaption>게임 로고 (투명 바탕)<br><a href="../img/logo/dock7_logo.png" download>PNG</a> · 1280×420</figcaption></figure><figure class="light"><a href="../img/logo/nangmangames_logo.png"><img src="../img/logo/nangmangames_logo.png" alt="" loading="lazy"></a><figcaption>NangmanGames 로고<br><a href="../img/logo/nangmangames_logo.png" download>PNG</a> · 952×636</figcaption></figure><figure class=""><a href="../img/logo/nangmangames_logo_dark.png"><img src="../img/logo/nangmangames_logo_dark.png" alt="" loading="lazy"></a><figcaption>어두운 바탕용 NangmanGames 로고<br><a href="../img/logo/nangmangames_logo_dark.png" download>PNG</a> · 908×640</figcaption></figure><figure class="photo"><a href="../img/art/library_hero_3840x1240.png"><img src="../img/art/library_hero_3840x1240.jpg" alt="" loading="lazy"></a><figcaption>키 아트 (가로)<br><a href="../img/art/library_hero_3840x1240.png" download>PNG</a> · 3840×1240</figcaption></figure><figure class="photo"><a href="../img/art/library_capsule_600x900.png"><img src="../img/art/library_capsule_600x900.jpg" alt="" loading="lazy"></a><figcaption>키 아트 (세로)<br><a href="../img/art/library_capsule_600x900.png" download>PNG</a> · 600×900</figcaption></figure><figure class="photo"><a href="../img/art/main_1232x706.png"><img src="../img/art/main_1232x706.jpg" alt="" loading="lazy"></a><figcaption>키 아트 (제목 없음)<br><a href="../img/art/main_1232x706.png" download>PNG</a> · 1232×706</figcaption></figure><figure class="photo"><a href="../img/art/header_920x430.png"><img src="../img/art/header_920x430.jpg" alt="" loading="lazy"></a><figcaption>키 아트 (작은 것)<br><a href="../img/art/header_920x430.png" download>PNG</a> · 920×430</figcaption></figure></div>
+  <section id="art">
+    <div class="head"><h2>로고와 키 아트</h2><a class="copy" href="../dock7_logos_keyart.zip" download>로고와 키 아트 · zip 191 KB</a></div>
+    <div class="art"><figure class="logo"><a href="../img/logo/dock7_logo.png"><img src="../img/logo/dock7_logo.png" alt="" loading="lazy"></a><figcaption><span>게임 로고 (투명 바탕)</span><span><a href="../img/logo/dock7_logo.png" download>PNG</a> · 1280×420</span></figcaption></figure><figure class="logo light"><a href="../img/logo/nangmangames_logo.png"><img src="../img/logo/nangmangames_logo.png" alt="" loading="lazy"></a><figcaption><span>NangmanGames 로고</span><span><a href="../img/logo/nangmangames_logo.png" download>PNG</a> · 952×636</span></figcaption></figure><figure class="logo"><a href="../img/logo/nangmangames_logo_dark.png"><img src="../img/logo/nangmangames_logo_dark.png" alt="" loading="lazy"></a><figcaption><span>NangmanGames 로고 (어두운 바탕용)</span><span><a href="../img/logo/nangmangames_logo_dark.png" download>PNG</a> · 908×640</span></figcaption></figure><figure class="photo"><a href="../img/art/library_hero_3840x1240.png"><img src="../img/art/library_hero_3840x1240.jpg" alt="" loading="lazy"></a><figcaption><span>키 아트 (가로)</span><span><a href="../img/art/library_hero_3840x1240.png" download>PNG</a> · 3840×1240</span></figcaption></figure><figure class="photo"><a href="../img/art/library_capsule_600x900.png"><img src="../img/art/library_capsule_600x900.jpg" alt="" loading="lazy"></a><figcaption><span>키 아트 (세로)</span><span><a href="../img/art/library_capsule_600x900.png" download>PNG</a> · 600×900</span></figcaption></figure><figure class="photo"><a href="../img/art/main_1232x706.png"><img src="../img/art/main_1232x706.jpg" alt="" loading="lazy"></a><figcaption><span>키 아트</span><span><a href="../img/art/main_1232x706.png" download>PNG</a> · 1232×706</span></figcaption></figure><figure class="photo"><a href="../img/art/header_920x430.png"><img src="../img/art/header_920x430.jpg" alt="" loading="lazy"></a><figcaption><span>키 아트 (작은 것)</span><span><a href="../img/art/header_920x430.png" download>PNG</a> · 920×430</span></figcaption></figure></div>
+    <h3 class="sw-h">색</h3>
+    <div class="swatches"><button class="sw" type="button" data-hex="#f6ead2" data-done="복사했어요" style="--c:#f6ead2"><i></i><span>로고 크림</span><code>#f6ead2</code></button><button class="sw" type="button" data-hex="#e8692c" data-done="복사했어요" style="--c:#e8692c"><i></i><span>로고 주황</span><code>#e8692c</code></button><button class="sw" type="button" data-hex="#241a1e" data-done="복사했어요" style="--c:#241a1e"><i></i><span>로고 외곽선</span><code>#241a1e</code></button><button class="sw" type="button" data-hex="#4d3148" data-done="복사했어요" style="--c:#4d3148"><i></i><span>밤하늘</span><code>#4d3148</code></button><button class="sw" type="button" data-hex="#ffc658" data-done="복사했어요" style="--c:#ffc658"><i></i><span>스튜디오 해 노랑</span><code>#ffc658</code></button><button class="sw" type="button" data-hex="#ff8a50" data-done="복사했어요" style="--c:#ff8a50"><i></i><span>스튜디오 해 주황</span><code>#ff8a50</code></button><button class="sw" type="button" data-hex="#ff5f7a" data-done="복사했어요" style="--c:#ff5f7a"><i></i><span>스튜디오 해 분홍</span><code>#ff5f7a</code></button></div>
+  </section>
 
-  <h2>개발자 소개</h2>
-  <div class="dev"><p>NangmanGames는 한국에서 혼자 게임을 만드는 1인 스튜디오입니다. 오랫동안 머릿속에 망상만 잔뜩 쌓아 두던 ‘아이디어맨’이었는데, 요즘은 그 망상을 하나씩 꺼내 실제로 조립해 보고 있습니다.</p><p>Dock 7은 그렇게 조립한 것들이 모인 곳입니다. 달을 도는 정거장, 아무도 찾으러 오지 않은 배, 밤에 켜 두는 라디오, 그리고 누군가 두고 간 물건들이요.</p></div>
+  <section id="studio" class="studio">
+    <div class="head"><h2>스튜디오</h2></div>
+    <div class="cols">
+      <img class="slogo" src="../img/logo/nangmangames_logo_dark.png" alt="NangmanGames" loading="lazy">
+      <div class="dev"><p>NangmanGames는 한국에서 혼자 게임을 만드는 1인 스튜디오입니다. 오랫동안 머릿속에 망상만 잔뜩 쌓아 두던 ‘아이디어맨’이었는데, 요즘은 그 망상을 하나씩 꺼내 실제로 조립해 보고 있습니다.</p><p>Dock 7은 그렇게 조립한 것들이 모인 곳입니다. 달을 도는 정거장, 아무도 찾으러 오지 않은 배, 밤에 켜 두는 라디오, 그리고 누군가 두고 간 물건들이요.</p><h3>함께 만들고 있는 게임</h3><a class="other" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=presskit"><img src="../img/studio/robots_to_scrap_header.jpg" alt="" loading="lazy"><span><b>Robots To Scrap</b>적이 지나갈 길을 직접 설계하는 파밍 타워 디펜스. 개발 중, 2027년 1분기 예정.</span></a></div>
+    </div>
+  </section>
 
-  <h2>연락</h2>
-  <p class="mail"><a href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a></p>
-  <p class="muted">인터뷰, 질문, 키가 필요하시면 언제든 메일 주세요.</p>
+  <section id="contact" class="contact">
+    <div class="head"><h2>연락</h2></div>
+    <div class="card mailcard">
+      <a class="mail" href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a>
+      <button class="copy" type="button" data-copy="t-mail" data-done="복사했어요">복사</button>
+      <p class="muted">인터뷰, 질문, 기사·영상용 Steam 키가 필요하시면 언제든 메일 주세요.</p>
+      <p class="muted">키를 요청하실 때는 메일 제목에 매체나 채널 이름을 넣고 그 주소를 함께 적어 주세요. 키는 채널이나 매체에 공개된 주소로 보내 드립니다.</p>
+    </div>
+    <p class="last"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam 위시리스트에 담기</a></p>
+  </section>
 </main>
+
 <footer>
-  <img src="../img/logo/nangmangames_logo_dark.png" alt="NangmanGames">
   <p>이 페이지의 스크린샷, 영상, 로고, 그림은 Dock 7을 다루는 글과 영상에 자유롭게 쓰셔도 됩니다.</p>
-  <p>© 2026 NangmanGames</p>
+  <p>© 2026 NangmanGames · 고친 날 <time datetime="2026-10-19">2026-10-19</time></p>
 </footer>
+
+<div class="lb" hidden role="dialog" aria-modal="true">
+  <button class="lb-x" type="button" aria-label="닫기">×</button>
+  <button class="lb-p" type="button" aria-label="앞">‹</button>
+  <img alt="">
+  <button class="lb-n" type="button" aria-label="뒤">›</button>
+  <a class="lb-d" download>PNG</a>
+</div>
+
+<pre hidden id="t-facts">Dock 7
+개발: NangmanGames (1인 스튜디오)
+나라: 대한민국
+플랫폼: Windows PC (Steam)
+데모: 2026년 12월
+Steam 넥스트 페스트: 2027년 2월
+앞서 해보기: 2027년 1분기
+데모 길이: 60~90분쯤 (예정)
+가격: 미정
+언어: 한국어, 영어 (일본어·중국어 준비 중)
+인원: 1인용
+조작: 키보드와 마우스
+장르: 코지 우주선 해체, 2D 픽셀 아트
+생성형 AI: 그림·소리·번역에 썼습니다 (Steam 페이지에 공개)
+Steam: https://store.steampowered.com/app/5425000/Dock_7/
+Contact: nangmanindie@gmail.com</pre>
+<pre hidden id="t-short">버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임. 타이머도 빚도 게임 오버도 없어요. 라디오를 틀어 놓고 느긋하게 자르고, 주워 온 물건과 구해 온 식구들로 작은 도크를 채워 가요.</pre>
+<pre hidden id="t-about">버려진 우주선을 레이저로 한 겹씩 벗겨 내고, 안에 남은 것을 건져 오는 코지 해체 게임. 타이머도 빚도 게임 오버도 없어요. 라디오를 틀어 놓고 느긋하게 자르고, 주워 온 물건과 구해 온 식구들로 작은 도크를 채워 가요.
+
+작은 해체 정거장, Dock 7. 당신은 여기서 고양이 한 마리와 지내는 프리랜서 해체업자예요. 게시판에서 폐함 한 척을 고르고, 인양함을 몰고 나가, 쓸 만한 것을 건져 돌아와요. 급할 건 하나도 없어요. 산소는 넉넉하고, 갚을 빚도 없고, 작업선은 터지지 않으니까요.
+
+한 겹씩, 천천히
+
+작은 작업선을 타고 폐함 위를 떠다니며 레이저로 그어요. 닿은 자리는 녹아서 열리고, 빙 둘러 오려낸 외판은 툭 하고 떨어져 나가 떠다녀요. 외판 아래에는 배선과 설비가, 그 아래에는 누군가 지내던 방이 있어요. 레이저는 지금 누른 층만 자르니까 아래 것을 태울 걱정 없이 마음껏 그어도 돼요.
+
+건진 건 눈에 보여요
+
+떠다니는 판과 부품은 트랙터빔으로 끌어와 작업선 뒤의 견인망에 담아요. 견인망은 담은 만큼 부풀어 오르고, 인양함 곁으로 가면 담긴 것이 줄줄이 넘어가 속이 비치는 스토리지에 쌓여요. 오늘 얼마나 건졌는지는 숫자가 아니라 쌓인 모양으로 알 수 있어요.
+
+이 배엔 뭐가 남아 있을까
+
+스캐너를 들면 외판 아래가 비쳐 보여요. 값나가는 부품도 좋지만, 진짜 반가운 건 전 주인이 두고 간 작은 물건들이에요. 낡은 머그잔, 뜨다 만 목도리, 병 속의 범선. 처음 건진 유실물은 팔지 않고 진열대에 올려 둬요. 화분은 조금씩 자라 꽃을 피우고, 휴대용 라디오를 건지면 새 채널이 잡혀요.
+
+배마다 사연이 있어요
+
+폐함은 의뢰마다 새로 만들어지고, 지나온 일이 그대로 남아 있어요. 그을린 선체, 덧칠로 지운 옛 이름, 두 사람 몫이 차려진 채인 식탁, 누가 구리판에 그려 놓은 웃는 얼굴. 무슨 일이 있었는지는 아무도 말해 주지 않아요. 한 겹씩 벗기다 보면 짐작이 갈 뿐이에요.
+
+도크의 저녁
+
+돌아오면 건져 온 것의 값을 받고, 저녁이 돼요. 새 유실물이 진열대에 놓이면 고양이가 와서 들여다봐요. 라디오 채널을 돌리고, 식구들 방에 들르고, 고양이를 쓰다듬다가 하루를 마무리하면 다음 날 아침이 와요.
+
+식구가 늘어요
+
+가끔 통신에 구조 신호가 잡혀요. 폐함에 남겨진 구조 캡슐을 건져 오면 도크에 식구가 한 명씩 늘어요. 공방을 여는 사람, 연구실을 맡는 사람, 라디오에서 곡을 소개해 주는 사람. 저마다 제 방이 있고, 친해지면 그 사람의 곡이 담긴 테이프가 생겨요.
+
+Dock 7이 우리 집이에요
+
+번 돈으로 작업선을 손보고, 공방에서 새 도구와 모듈을 만들어요. 건져 온 자재로는 도크에 공사를 걸어요. 방마다 벽과 등불, 전구 줄을 고르고, 유실물은 마음에 드는 창턱으로 옮겨 놓아요. 꾸민다고 수치가 오르지는 않아요. 그렇게 조금씩 우리 집이 되는 거예요.
+
+이런 게임이에요
+
+- 레이저로 한 겹씩 벗겨 내는 해체
+- 타이머, 빚, 게임 오버 없음
+- 의뢰마다 새로 만들어지는, 사연 있는 폐함
+- 유실물 진열과 도감, 방 꾸밈
+- 로파이 라디오와 모으는 테이프
+- 어디서나 켜는 사진 모드
+- 쓸모는 없지만 울릴 수 있는 경적
+- 고양이
+
+고양이 이름을 지어 주세요
+
+Dock 7에는 처음부터 고양이가 한 마리 살아요. 하는 일은 없어요. 이름은 당신이 지어 주면 돼요. 위시리스트에 넣어 두고, 그때까지 천천히 생각해 보세요.</pre>
+<pre hidden id="t-mail">nangmanindie@gmail.com</pre>
 </body>
 </html>

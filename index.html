@@ -5,110 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dock 7 — Press Kit</title>
 <meta name="description" content="A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside. No timers, no debt, no game over. Put the radio on, cut at your own pace, and fill your little dock with the things you find and the family you rescue.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Dock 7 — Press Kit">
 <meta property="og:description" content="A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside. No timers, no debt, no game over. Put the radio on, cut at your own pace, and fill your little dock with the things you find and the family you rescue.">
 <meta property="og:image" content="https://nangmangames.github.io/dock7/img/art/header_920x430.jpg">
+<meta property="og:url" content="https://nangmangames.github.io/dock7/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d1220">
 <link rel="icon" href="img/logo/nangmangames_mark_64.png">
 <link rel="alternate" hreflang="en" href="">
 <link rel="alternate" hreflang="ko" href="ko/">
-<style>
-:root { --bg:#10141f; --card:#171d2c; --line:#2a3247; --ink:#ece3cf; --soft:#a69f91; --sun:#ffc658; --orange:#ff8a50; --pink:#ff5f7a }
-* { box-sizing:border-box }
-html { background:var(--bg) }
-body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif }
-a { color:var(--sun) }
-img, video, iframe { display:block; max-width:100% }
-.hero { position:relative; min-height:min(62vw, 560px); display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding:32px 16px 40px;
-  background:linear-gradient(to bottom, rgba(16,20,31,.15), rgba(16,20,31,.2) 55%, var(--bg)), url("img/art/library_hero_3840x1240.jpg") center/cover }
-.hero .logo { width:min(560px, 86vw); image-rendering:pixelated; filter:drop-shadow(0 4px 0 rgba(0,0,0,.35)) }
-.hero .lead { max-width:720px; text-align:center; margin:18px 0 22px; text-shadow:0 2px 6px rgba(0,0,0,.8) }
-.lang { position:absolute; top:14px; right:16px; color:var(--ink); background:rgba(16,20,31,.7); padding:4px 10px; border-radius:3px; text-decoration:none; font-size:14px }
-.btns { display:flex; gap:10px; flex-wrap:wrap; justify-content:center }
-.btn { display:inline-block; padding:10px 18px; border:2px solid var(--ink); border-radius:3px; color:var(--ink); text-decoration:none; font-weight:600; background:rgba(16,20,31,.6) }
-.btn.main { background:var(--orange); border-color:var(--orange); color:#1a1209 }
-.btn small { font-weight:400; opacity:.75 }
-main { max-width:1120px; margin:0 auto; padding:0 16px 64px }
-.top { display:grid; grid-template-columns:minmax(0, 320px) minmax(0, 1fr); gap:40px; align-items:start }
-@media (max-width:820px) { .top { grid-template-columns:minmax(0, 1fr) } }
-aside { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:18px 20px }
-dl { margin:0; display:grid; grid-template-columns:auto minmax(0, 1fr); gap:6px 14px; font-size:14px }
-dt { color:var(--soft) }
-dd { margin:0 }
-aside h2 { margin-top:22px }
-aside h2:first-child { margin-top:0 }
-aside ul { margin:0; padding-left:18px }
-h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--sun); margin:56px 0 14px; border-bottom:1px solid var(--line); padding-bottom:6px }
-.top h2 { margin-top:0 }
-html[lang="ko"] h2 { letter-spacing:.04em }
-article h3 { font-size:18px; margin:26px 0 6px; color:var(--ink) }
-article p, article li { color:#d8cfbb }
-.sub, .note, figcaption, .muted { color:var(--soft); font-size:14px }
-.frame { width:100%; aspect-ratio:16/9; border:0; background:#000 }
-.shots { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:10px }
-.shots img { width:100%; height:auto; border-radius:2px }
-.clips { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:10px }
-.clips figure { margin:0 }
-.clips video { width:100%; border-radius:2px; background:#000 }
-.art { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:18px }
-.art figure { margin:0 }
-.art img { width:100%; height:170px; object-fit:contain; background:var(--card); border:1px solid var(--line); border-radius:3px; padding:10px; image-rendering:pixelated }
-.art figure.light img { background:#f3eee2 }
-.art figure.photo img { object-fit:cover; padding:0; image-rendering:auto }
-.dev { max-width:720px }
-.mail { font-size:20px; font-weight:600 }
-footer { border-top:1px solid var(--line); padding:20px 16px 40px; text-align:center; color:var(--soft); font-size:13px }
-footer img { width:120px; margin:0 auto 10px }
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.39.3/dist/galmuri.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
 </head>
 <body>
-<header class="hero">
+<nav class="bar" aria-label="Press Kit">
+  <a class="brand" href="#top"><img src="img/logo/nangmangames_mark_64.png" alt="">Dock 7 <span>Press Kit</span></a>
+  <div class="jump"><a href="#facts">Facts</a><a href="#game">Game</a><a href="#teaser">Teaser</a><a href="#shots">Screenshots</a><a href="#art">Logos</a><a href="#studio">Studio</a><a href="#contact">Contact</a></div>
   <a class="lang" href="ko/" hreflang="ko">한국어</a>
-  <img class="logo" src="img/logo/dock7_logo.png" alt="Dock 7">
-  <p class="lead">A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside. No timers, no debt, no game over. Put the radio on, cut at your own pace, and fill your little dock with the things you find and the family you rescue.</p>
-  <div class="btns"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Wishlist on Steam</a><a class="btn" href="dock7_presskit.zip" download>Download everything <small>zip · 65 MB</small></a></div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="sky" style="background-image:url(img/art/library_hero_3840x1240.jpg)"></div>
+  <img class="logo" src="img/logo/dock7_logo.png" alt="Dock 7" width="1280" height="420">
+  <p class="lead">A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside.</p>
+  <div class="btns"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Wishlist on Steam</a><a class="btn" href="#teaser">Watch the teaser</a><a class="btn" href="dock7_presskit.zip" download title="Screenshots, logos, key art, fact sheet">Download everything <small>zip · 65 MB</small></a></div>
 </header>
+
 <main>
-  <div class="top">
-    <aside>
-      <h2>Fact sheet</h2>
-      <dl><dt>Developer</dt><dd>NangmanGames (one-person studio)</dd><dt>Based in</dt><dd>South Korea</dd><dt>Platform</dt><dd>Windows PC (Steam)</dd><dt>Demo</dt><dd>December 2026</dd><dt>Steam Next Fest</dt><dd>February 2027</dd><dt>Early Access</dt><dd>Q1 2027</dd><dt>Price</dt><dd>TBA</dd><dt>Languages</dt><dd>English, Korean</dd><dt>Players</dt><dd>Single-player</dd><dt>Genre</dt><dd>Cozy shipbreaking, 2D pixel art</dd><dt>Generative AI</dt><dd>Used for art, sound and translation, as disclosed on the Steam page</dd></dl>
-      <h2>Contact</h2>
-      <p class="mail"><a href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a></p>
-      <h2>Links</h2>
-      <ul><li><a href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam</a></li><li><a href="https://x.com/NangManGames">X</a></li><li><a href="https://www.youtube.com/@NangManGames">YouTube</a></li><li><a href="https://www.tiktok.com/@nangmangames">TikTok</a></li></ul>
-    </aside>
-    <article>
-      <h2>About the game</h2>
-      <p>Dock 7 is a small salvage station. You&#x27;re a freelance shipbreaker who lives here with one cat. Pick a wreck from the board, take your Salvage Ship out, and come home with whatever&#x27;s worth keeping. There&#x27;s no rush at all. You have plenty of air, no debt to pay off, and a Work Pod that can&#x27;t blow up.</p><h3>One layer at a time</h3><p>Drift over the wreck in your little Work Pod and draw with the Laser. Wherever it touches, the hull melts open, and a plate you&#x27;ve cut all the way around pops loose and floats away. Under the hull plating there&#x27;s wiring and machinery, and under that, the rooms someone used to live in. The Laser only cuts the layer you&#x27;re pointing at, so draw as freely as you like without worrying about burning what&#x27;s underneath.</p><h3>You can see what you&#x27;ve found</h3><p>Pull drifting plates and parts in with the Tractor Beam and tuck them into the Tow Net behind your Work Pod. The net swells with everything you put in it, and when you come up beside the Salvage Ship, it all streams across and piles up in the see-through Storage. You know how the day went by the shape of the pile, not by a number.</p><h3>What&#x27;s still inside this one?</h3><p>Hold up the Scanner and you can see through the hull. Valuable parts are nice, but the real finds are the little things the last owner left behind. An Old Mug, a Half-Knit Scarf, a Ship in a Bottle. The first time you find a Keepsake, you don&#x27;t sell it. It goes on your display shelf. The potted plant grows a little at a time until it blooms, and finding a Portable Radio brings in a new channel.</p><h3>Every wreck has a story</h3><p>Each contract builds a new wreck, and what it&#x27;s been through is still there. A scorched hull, an old name painted over, a table still set for two, a smiley face someone drew on a copper plate. Nobody tells you what happened. You just start to guess, one layer at a time.</p><h3>Evenings at the dock</h3><p>When you get back, you&#x27;re paid for what you brought in, and evening comes. If there&#x27;s a new Keepsake on the shelf, the cat wanders over for a look. Turn the radio dial, drop by the family&#x27;s rooms, pet the cat for a while, and call it a day. Then it&#x27;s morning again.</p><h3>The family grows</h3><p>Now and then a Distress Signal comes in. Bring back the Rescue Capsule left in a wreck, and the dock gains one more member of the family. One opens the Workshop, one takes the Lab, one introduces songs on the radio. Each has a room of their own, and once you&#x27;re close, you get a Tape with their song on it.</p><h3>Dock 7 is home</h3><p>Use what you earn to tune up your Work Pod, and build new Tools and Modules in the Workshop. The materials you haul back go into construction at the dock. Choose the walls, lanterns, and String Lights for each room, and move your Keepsakes to whichever windowsill you like. None of it raises a single stat. It&#x27;s just how the place slowly becomes home.</p><h3>What kind of game is this?</h3><ul><li>Shipbreaking with a laser, one layer at a time</li><li>No timers, no debt, no game over</li><li>A new wreck for every contract, each with a story</li><li>Keepsakes to display, a Codex, rooms to make your own</li><li>Lo-fi radio and Tapes to collect</li><li>Photo mode, anywhere</li><li>A horn you can honk for no reason</li><li>A cat</li></ul><h3>Please name the cat</h3><p>A cat has lived at Dock 7 from the start. The cat doesn&#x27;t do anything. The name is up to you. Add the game to your wishlist, and take your time thinking it over.</p>
-    </article>
-  </div>
+  <section id="facts" class="glance">
+    <div class="facts">
+      <div class="slip">
+        <div class="paper">
+          <div class="slip-head"><h2 aria-label="Fact sheet">SALVAGE STATEMENT</h2><button class="copy" type="button" data-copy="t-facts" data-done="Copied">Copy fact sheet</button></div>
+          <p class="slip-sub">Dock 7 · Fact sheet</p>
+          <dl><div><dt>Developer</dt><dd>NangmanGames (one-person studio)</dd></div><div><dt>Based in</dt><dd>South Korea</dd></div><div><dt>Platform</dt><dd>Windows PC (Steam)</dd></div><div><dt>Demo</dt><dd>December 2026</dd></div><div><dt>Steam Next Fest</dt><dd>February 2027</dd></div><div><dt>Early Access</dt><dd>Q1 2027</dd></div><div><dt>Demo length</dt><dd>About 60–90 minutes (planned)</dd></div><div><dt>Price</dt><dd>TBA</dd></div><div><dt>Languages</dt><dd>English, Korean (Japanese and Chinese in progress)</dd></div><div><dt>Players</dt><dd>Single-player</dd></div><div><dt>Controls</dt><dd>Keyboard and mouse</dd></div><div><dt>Genre</dt><dd>Cozy shipbreaking, 2D pixel art</dd></div><div><dt>Generative AI</dt><dd>Used for art, sound and translation, as disclosed on the Steam page</dd></div></dl>
+          <svg class="stamp" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="35" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="40" cy="40" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="40" y="45" text-anchor="middle" font-size="22">D7</text><text x="40" y="60" text-anchor="middle" font-size="8">CHECKED</text></svg>
+        </div>
+        <div class="register"><span class="no">No.0007</span><span>FACT SHEET</span></div>
+      </div>
+      <div class="sl"><a href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Steam</a><a href="https://x.com/NangManGames">X</a><a href="https://www.youtube.com/@NangManGames">YouTube</a><a href="https://www.tiktok.com/@nangmangames">TikTok</a></div>
+    </div>
+    <div class="pitch">
+      <div class="head"><h2>In one breath</h2><button class="copy" type="button" data-copy="t-short" data-done="Copied">Copy</button></div>
+      <p class="big">A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside. No timers, no debt, no game over. Put the radio on, cut at your own pace, and fill your little dock with the things you find and the family you rescue.</p>
+      <h3>Features</h3><ul class="feats"><li>Shipbreaking with a laser, one layer at a time</li><li>No timers, no debt, no game over</li><li>A new wreck for every contract, each with a story</li><li>Keepsakes to display, a Codex, rooms to make your own</li><li>Lo-fi radio and Tapes to collect</li><li>Photo mode, anywhere</li><li>A horn you can honk for no reason</li><li>A cat</li></ul>
+    </div>
+  </section>
 
-  <h2>Teaser</h2>
-  <video class="frame" controls preload="metadata" poster="img/art/main_1232x706.jpg" src="video/dock7_teaser.mp4"></video><p class="sub"><a href="video/dock7_teaser.mp4" download>Download the teaser (mp4)</a> · 49 MB</p>
+  
+  <section id="game">
+    <div class="head"><h2>About the game</h2><span class="acts"><a class="copy" href="dock7_gifs.zip" download>All GIFs · zip 20 MB</a><button class="copy" type="button" data-copy="t-about" data-done="Copied">Copy full description</button></span></div>
+    <div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_intro.webm" poster="video/store_intro.jpg"></video><figcaption><a href="gif/dock7_intro.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><p>Dock 7 is a small salvage station. You&#x27;re a freelance shipbreaker who lives here with one cat. Pick a wreck from the board, take your Salvage Ship out, and come home with whatever&#x27;s worth keeping. There&#x27;s no rush at all. You have plenty of air, no debt to pay off, and a Work Pod that can&#x27;t blow up.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_cut.webm" poster="video/store_cut.jpg"></video><figcaption><a href="gif/dock7_cut.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><h3>One layer at a time</h3><p>Drift over the wreck in your little Work Pod and draw with the Laser. Wherever it touches, the hull melts open, and a plate you&#x27;ve cut all the way around pops loose and floats away. Under the hull plating there&#x27;s wiring and machinery, and under that, the rooms someone used to live in. The Laser only cuts the layer you&#x27;re pointing at, so draw as freely as you like without worrying about burning what&#x27;s underneath.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_haul.webm" poster="video/store_haul.jpg"></video><figcaption><a href="gif/dock7_haul.gif" download>GIF</a> · 1 MB</figcaption></figure><div class="words"><h3>You can see what you&#x27;ve found</h3><p>Pull drifting plates and parts in with the Tractor Beam and tuck them into the Tow Net behind your Work Pod. The net swells with everything you put in it, and when you come up beside the Salvage Ship, it all streams across and piles up in the see-through Storage. You know how the day went by the shape of the pile, not by a number.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_finds.webm" poster="video/store_finds.jpg"></video><figcaption><a href="gif/dock7_finds.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><h3>What&#x27;s still inside this one?</h3><p>Hold up the Scanner and you can see through the hull. Valuable parts are nice, but the real finds are the little things the last owner left behind. An Old Mug, a Half-Knit Scarf, a Ship in a Bottle. The first time you find a Keepsake, you don&#x27;t sell it. It goes on your display shelf. The potted plant grows a little at a time until it blooms, and finding a Portable Radio brings in a new channel.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_wrecks.webm" poster="video/store_wrecks.jpg"></video><figcaption><a href="gif/dock7_wrecks.gif" download>GIF</a> · 3 MB</figcaption></figure><div class="words"><h3>Every wreck has a story</h3><p>Each contract builds a new wreck, and what it&#x27;s been through is still there. A scorched hull, an old name painted over, a table still set for two, a smiley face someone drew on a copper plate. Nobody tells you what happened. You just start to guess, one layer at a time.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_evening.webm" poster="video/store_evening.jpg"></video><figcaption><a href="gif/dock7_evening.gif" download>GIF</a> · 909 KB</figcaption></figure><div class="words"><h3>Evenings at the dock</h3><p>When you get back, you&#x27;re paid for what you brought in, and evening comes. If there&#x27;s a new Keepsake on the shelf, the cat wanders over for a look. Turn the radio dial, drop by the family&#x27;s rooms, pet the cat for a while, and call it a day. Then it&#x27;s morning again.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_crew.webm" poster="video/store_crew.jpg"></video><figcaption><a href="gif/dock7_crew.gif" download>GIF</a> · 2 MB</figcaption></figure><div class="words"><h3>The family grows</h3><p>Now and then a Distress Signal comes in. Bring back the Rescue Capsule left in a wreck, and the dock gains one more member of the family. One opens the Workshop, one takes the Lab, one introduces songs on the radio. Each has a room of their own, and once you&#x27;re close, you get a Tape with their song on it.</p></div></div><div class="chap flip"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_dock.webm" poster="video/store_dock.jpg"></video><figcaption><a href="gif/dock7_dock.gif" download>GIF</a> · 6 MB</figcaption></figure><div class="words"><h3>Dock 7 is home</h3><p>Use what you earn to tune up your Work Pod, and build new Tools and Modules in the Workshop. The materials you haul back go into construction at the dock. Choose the walls, lanterns, and String Lights for each room, and move your Keepsakes to whichever windowsill you like. None of it raises a single stat. It&#x27;s just how the place slowly becomes home.</p></div></div><div class="chap"><figure class="clip"><video muted loop playsinline preload="none" data-src="video/store_cat.webm" poster="video/store_cat.jpg"></video><figcaption><a href="gif/dock7_cat.gif" download>GIF</a> · 397 KB</figcaption></figure><div class="words"><h3>Please name the cat</h3><p>A cat has lived at Dock 7 from the start. The cat doesn&#x27;t do anything. The name is up to you. Add the game to your wishlist, and take your time thinking it over.</p></div></div>
+  </section>
 
-  <h2>Screenshots</h2>
-  <p class="muted">1920×1080 PNG. Click to open the full size.</p>
-  <div class="shots"><a href="img/screens/en/01_laser_english.png"><img src="img/screens/en/thumb/01_laser_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/16_inside_english.png"><img src="img/screens/en/thumb/16_inside_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/05_keel_english.png"><img src="img/screens/en/thumb/05_keel_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/15_net_full_english.png"><img src="img/screens/en/thumb/15_net_full_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/17_scanned_english.png"><img src="img/screens/en/thumb/17_scanned_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/07_stow_english.png"><img src="img/screens/en/thumb/07_stow_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/08_statement_english.png"><img src="img/screens/en/thumb/08_statement_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/11_home_english.png"><img src="img/screens/en/thumb/11_home_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/09_seoha_heart_english.png"><img src="img/screens/en/thumb/09_seoha_heart_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/12_archive_english.png"><img src="img/screens/en/thumb/12_archive_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/14_cat_english.png"><img src="img/screens/en/thumb/14_cat_english.jpg" alt="" loading="lazy" width="960" height="540"></a><a href="img/screens/en/00_title_english.png"><img src="img/screens/en/thumb/00_title_english.jpg" alt="" loading="lazy" width="960" height="540"></a></div>
+  <section id="teaser">
+    <div class="head"><h2>Teaser</h2></div>
+    <div class="screen"><button class="facade" type="button" data-yt="hidHpr-TY1s" aria-label="Play the teaser" style="background-image:url(img/art/main_1232x706.jpg)"><span class="play"></span></button></div>
+    <p class="sub"><a href="https://www.youtube.com/watch?v=hidHpr-TY1s">Watch on YouTube</a> · <a href="video/dock7_teaser.mp4" download>Download mp4</a> · 49 MB</p>
+  </section>
 
-  <h2>Short loops</h2>
-  <p class="muted">Silent loops from the Steam page. Each one has a GIF.</p>
-  <div class="clips"><figure><video src="video/store_cut.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_cut.gif" download>GIF</a> · 2 MB</figcaption></figure><figure><video src="video/store_haul.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_haul.gif" download>GIF</a> · 1 MB</figcaption></figure><figure><video src="video/store_finds.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_finds.gif" download>GIF</a> · 2 MB</figcaption></figure><figure><video src="video/store_wrecks.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_wrecks.gif" download>GIF</a> · 3 MB</figcaption></figure><figure><video src="video/store_evening.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_evening.gif" download>GIF</a> · 909 KB</figcaption></figure><figure><video src="video/store_crew.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_crew.gif" download>GIF</a> · 2 MB</figcaption></figure><figure><video src="video/store_dock.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_dock.gif" download>GIF</a> · 6 MB</figcaption></figure><figure><video src="video/store_cat.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_cat.gif" download>GIF</a> · 397 KB</figcaption></figure><figure><video src="video/store_intro.webm" autoplay muted loop playsinline preload="metadata"></video><figcaption><a href="gif/dock7_intro.gif" download>GIF</a> · 2 MB</figcaption></figure></div>
+  <section id="shots">
+    <div class="head"><h2>Screenshots</h2><a class="copy" href="dock7_presskit.zip" download>All screenshots are in the zip · 65 MB</a></div>
+    <p class="muted">1920×1080 PNG, no watermarks. Click to view, arrow keys to browse.</p>
+    <div class="shots"><a class="shot" href="img/screens/en/dock7_01_laser.png" data-lb><img src="img/screens/en/thumb/dock7_01_laser.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_16_inside.png" data-lb><img src="img/screens/en/thumb/dock7_16_inside.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_05_keel.png" data-lb><img src="img/screens/en/thumb/dock7_05_keel.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_15_net_full.png" data-lb><img src="img/screens/en/thumb/dock7_15_net_full.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_17_scanned.png" data-lb><img src="img/screens/en/thumb/dock7_17_scanned.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_07_stow.png" data-lb><img src="img/screens/en/thumb/dock7_07_stow.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_08_statement.png" data-lb><img src="img/screens/en/thumb/dock7_08_statement.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_11_home.png" data-lb><img src="img/screens/en/thumb/dock7_11_home.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_09_seoha_heart.png" data-lb><img src="img/screens/en/thumb/dock7_09_seoha_heart.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_12_archive.png" data-lb><img src="img/screens/en/thumb/dock7_12_archive.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_14_cat.png" data-lb><img src="img/screens/en/thumb/dock7_14_cat.jpg" alt="" loading="lazy" width="960" height="540"></a><a class="shot" href="img/screens/en/dock7_00_title.png" data-lb><img src="img/screens/en/thumb/dock7_00_title.jpg" alt="" loading="lazy" width="960" height="540"></a></div>
+  </section>
 
-  <h2>Logos and key art</h2>
-  <div class="art"><figure class=""><a href="img/logo/dock7_logo.png"><img src="img/logo/dock7_logo.png" alt="" loading="lazy"></a><figcaption>Game logo (transparent)<br><a href="img/logo/dock7_logo.png" download>PNG</a> · 1280×420</figcaption></figure><figure class="light"><a href="img/logo/nangmangames_logo.png"><img src="img/logo/nangmangames_logo.png" alt="" loading="lazy"></a><figcaption>NangmanGames logo<br><a href="img/logo/nangmangames_logo.png" download>PNG</a> · 952×636</figcaption></figure><figure class=""><a href="img/logo/nangmangames_logo_dark.png"><img src="img/logo/nangmangames_logo_dark.png" alt="" loading="lazy"></a><figcaption>NangmanGames logo for dark backgrounds<br><a href="img/logo/nangmangames_logo_dark.png" download>PNG</a> · 908×640</figcaption></figure><figure class="photo"><a href="img/art/library_hero_3840x1240.png"><img src="img/art/library_hero_3840x1240.jpg" alt="" loading="lazy"></a><figcaption>Key art, wide<br><a href="img/art/library_hero_3840x1240.png" download>PNG</a> · 3840×1240</figcaption></figure><figure class="photo"><a href="img/art/library_capsule_600x900.png"><img src="img/art/library_capsule_600x900.jpg" alt="" loading="lazy"></a><figcaption>Key art, tall<br><a href="img/art/library_capsule_600x900.png" download>PNG</a> · 600×900</figcaption></figure><figure class="photo"><a href="img/art/main_1232x706.png"><img src="img/art/main_1232x706.jpg" alt="" loading="lazy"></a><figcaption>Key art, no title<br><a href="img/art/main_1232x706.png" download>PNG</a> · 1232×706</figcaption></figure><figure class="photo"><a href="img/art/header_920x430.png"><img src="img/art/header_920x430.jpg" alt="" loading="lazy"></a><figcaption>Key art, small<br><a href="img/art/header_920x430.png" download>PNG</a> · 920×430</figcaption></figure></div>
+  <section id="art">
+    <div class="head"><h2>Logos and key art</h2><a class="copy" href="dock7_logos_keyart.zip" download>Logos and key art · zip 191 KB</a></div>
+    <div class="art"><figure class="logo"><a href="img/logo/dock7_logo.png"><img src="img/logo/dock7_logo.png" alt="" loading="lazy"></a><figcaption><span>Game logo, transparent</span><span><a href="img/logo/dock7_logo.png" download>PNG</a> · 1280×420</span></figcaption></figure><figure class="logo light"><a href="img/logo/nangmangames_logo.png"><img src="img/logo/nangmangames_logo.png" alt="" loading="lazy"></a><figcaption><span>NangmanGames logo</span><span><a href="img/logo/nangmangames_logo.png" download>PNG</a> · 952×636</span></figcaption></figure><figure class="logo"><a href="img/logo/nangmangames_logo_dark.png"><img src="img/logo/nangmangames_logo_dark.png" alt="" loading="lazy"></a><figcaption><span>NangmanGames logo, for dark backgrounds</span><span><a href="img/logo/nangmangames_logo_dark.png" download>PNG</a> · 908×640</span></figcaption></figure><figure class="photo"><a href="img/art/library_hero_3840x1240.png"><img src="img/art/library_hero_3840x1240.jpg" alt="" loading="lazy"></a><figcaption><span>Key art, wide</span><span><a href="img/art/library_hero_3840x1240.png" download>PNG</a> · 3840×1240</span></figcaption></figure><figure class="photo"><a href="img/art/library_capsule_600x900.png"><img src="img/art/library_capsule_600x900.jpg" alt="" loading="lazy"></a><figcaption><span>Key art, tall</span><span><a href="img/art/library_capsule_600x900.png" download>PNG</a> · 600×900</span></figcaption></figure><figure class="photo"><a href="img/art/main_1232x706.png"><img src="img/art/main_1232x706.jpg" alt="" loading="lazy"></a><figcaption><span>Key art</span><span><a href="img/art/main_1232x706.png" download>PNG</a> · 1232×706</span></figcaption></figure><figure class="photo"><a href="img/art/header_920x430.png"><img src="img/art/header_920x430.jpg" alt="" loading="lazy"></a><figcaption><span>Key art, small</span><span><a href="img/art/header_920x430.png" download>PNG</a> · 920×430</span></figcaption></figure></div>
+    <h3 class="sw-h">Colors</h3>
+    <div class="swatches"><button class="sw" type="button" data-hex="#f6ead2" data-done="Copied" style="--c:#f6ead2"><i></i><span>Logo cream</span><code>#f6ead2</code></button><button class="sw" type="button" data-hex="#e8692c" data-done="Copied" style="--c:#e8692c"><i></i><span>Logo orange</span><code>#e8692c</code></button><button class="sw" type="button" data-hex="#241a1e" data-done="Copied" style="--c:#241a1e"><i></i><span>Logo outline</span><code>#241a1e</code></button><button class="sw" type="button" data-hex="#4d3148" data-done="Copied" style="--c:#4d3148"><i></i><span>Night sky</span><code>#4d3148</code></button><button class="sw" type="button" data-hex="#ffc658" data-done="Copied" style="--c:#ffc658"><i></i><span>Studio sun, yellow</span><code>#ffc658</code></button><button class="sw" type="button" data-hex="#ff8a50" data-done="Copied" style="--c:#ff8a50"><i></i><span>Studio sun, orange</span><code>#ff8a50</code></button><button class="sw" type="button" data-hex="#ff5f7a" data-done="Copied" style="--c:#ff5f7a"><i></i><span>Studio sun, pink</span><code>#ff5f7a</code></button></div>
+  </section>
 
-  <h2>About the developer</h2>
-  <div class="dev"><p>NangmanGames is a one-person studio in South Korea. For years I was the classic “ideas guy”, all daydreams and nothing finished. These days I’m pulling those daydreams out one at a time and actually putting them together.</p><p>Dock 7 is where they’ve ended up: a station circling the moon, ships nobody came back for, a radio left on at night, and the things people left behind.</p><p class="note">Nangman (낭만) is a Korean word for a warm, slightly wistful kind of romance.</p></div>
+  <section id="studio" class="studio">
+    <div class="head"><h2>Studio</h2></div>
+    <div class="cols">
+      <img class="slogo" src="img/logo/nangmangames_logo_dark.png" alt="NangmanGames" loading="lazy">
+      <div class="dev"><p>NangmanGames is a one-person studio in South Korea. For years I was the classic “ideas guy”, all daydreams and nothing finished. These days I’m pulling those daydreams out one at a time and actually putting them together.</p><p>Dock 7 is where they’ve ended up: a station circling the moon, ships nobody came back for, a radio left on at night, and the things people left behind.</p><p class="note">Nangman (낭만) is a Korean word for a warm, slightly wistful kind of romance.</p><h3>Also in development</h3><a class="other" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=presskit"><img src="img/studio/robots_to_scrap_header.jpg" alt="" loading="lazy"><span><b>Robots To Scrap</b>A loot-focused tower defense game where you design the paths your enemies take. In development, coming Q1 2027.</span></a></div>
+    </div>
+  </section>
 
-  <h2>Contact</h2>
-  <p class="mail"><a href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a></p>
-  <p class="muted">For interviews, questions or a key, write any time.</p>
+  <section id="contact" class="contact">
+    <div class="head"><h2>Contact</h2></div>
+    <div class="card mailcard">
+      <a class="mail" href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a>
+      <button class="copy" type="button" data-copy="t-mail" data-done="Copied">Copy</button>
+      <p class="muted">Interviews, questions, a Steam key for coverage: write any time.</p>
+      <p class="muted">Asking for a key? Put your outlet or channel name in the subject line and include a link to it. Keys go to the address listed on your channel or site.</p>
+    </div>
+    <p class="last"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=presskit">Wishlist on Steam</a></p>
+  </section>
 </main>
+
 <footer>
-  <img src="img/logo/nangmangames_logo_dark.png" alt="NangmanGames">
   <p>Screenshots, footage, logos and art on this page may be used freely in coverage of Dock 7.</p>
-  <p>© 2026 NangmanGames</p>
+  <p>© 2026 NangmanGames · Updated <time datetime="2026-10-19">2026-10-19</time></p>
 </footer>
+
+<div class="lb" hidden role="dialog" aria-modal="true">
+  <button class="lb-x" type="button" aria-label="Close">×</button>
+  <button class="lb-p" type="button" aria-label="Previous">‹</button>
+  <img alt="">
+  <button class="lb-n" type="button" aria-label="Next">›</button>
+  <a class="lb-d" download>PNG</a>
+</div>
+
+<pre hidden id="t-facts">Dock 7
+Developer: NangmanGames (one-person studio)
+Based in: South Korea
+Platform: Windows PC (Steam)
+Demo: December 2026
+Steam Next Fest: February 2027
+Early Access: Q1 2027
+Demo length: About 60–90 minutes (planned)
+Price: TBA
+Languages: English, Korean (Japanese and Chinese in progress)
+Players: Single-player
+Controls: Keyboard and mouse
+Genre: Cozy shipbreaking, 2D pixel art
+Generative AI: Used for art, sound and translation, as disclosed on the Steam page
+Steam: https://store.steampowered.com/app/5425000/Dock_7/
+Contact: nangmanindie@gmail.com</pre>
+<pre hidden id="t-short">A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside. No timers, no debt, no game over. Put the radio on, cut at your own pace, and fill your little dock with the things you find and the family you rescue.</pre>
+<pre hidden id="t-about">A cozy shipbreaking game about peeling wrecks apart with a laser, one layer at a time, and bringing home what&#x27;s left inside. No timers, no debt, no game over. Put the radio on, cut at your own pace, and fill your little dock with the things you find and the family you rescue.
+
+Dock 7 is a small salvage station. You&#x27;re a freelance shipbreaker who lives here with one cat. Pick a wreck from the board, take your Salvage Ship out, and come home with whatever&#x27;s worth keeping. There&#x27;s no rush at all. You have plenty of air, no debt to pay off, and a Work Pod that can&#x27;t blow up.
+
+One layer at a time
+
+Drift over the wreck in your little Work Pod and draw with the Laser. Wherever it touches, the hull melts open, and a plate you&#x27;ve cut all the way around pops loose and floats away. Under the hull plating there&#x27;s wiring and machinery, and under that, the rooms someone used to live in. The Laser only cuts the layer you&#x27;re pointing at, so draw as freely as you like without worrying about burning what&#x27;s underneath.
+
+You can see what you&#x27;ve found
+
+Pull drifting plates and parts in with the Tractor Beam and tuck them into the Tow Net behind your Work Pod. The net swells with everything you put in it, and when you come up beside the Salvage Ship, it all streams across and piles up in the see-through Storage. You know how the day went by the shape of the pile, not by a number.
+
+What&#x27;s still inside this one?
+
+Hold up the Scanner and you can see through the hull. Valuable parts are nice, but the real finds are the little things the last owner left behind. An Old Mug, a Half-Knit Scarf, a Ship in a Bottle. The first time you find a Keepsake, you don&#x27;t sell it. It goes on your display shelf. The potted plant grows a little at a time until it blooms, and finding a Portable Radio brings in a new channel.
+
+Every wreck has a story
+
+Each contract builds a new wreck, and what it&#x27;s been through is still there. A scorched hull, an old name painted over, a table still set for two, a smiley face someone drew on a copper plate. Nobody tells you what happened. You just start to guess, one layer at a time.
+
+Evenings at the dock
+
+When you get back, you&#x27;re paid for what you brought in, and evening comes. If there&#x27;s a new Keepsake on the shelf, the cat wanders over for a look. Turn the radio dial, drop by the family&#x27;s rooms, pet the cat for a while, and call it a day. Then it&#x27;s morning again.
+
+The family grows
+
+Now and then a Distress Signal comes in. Bring back the Rescue Capsule left in a wreck, and the dock gains one more member of the family. One opens the Workshop, one takes the Lab, one introduces songs on the radio. Each has a room of their own, and once you&#x27;re close, you get a Tape with their song on it.
+
+Dock 7 is home
+
+Use what you earn to tune up your Work Pod, and build new Tools and Modules in the Workshop. The materials you haul back go into construction at the dock. Choose the walls, lanterns, and String Lights for each room, and move your Keepsakes to whichever windowsill you like. None of it raises a single stat. It&#x27;s just how the place slowly becomes home.
+
+What kind of game is this?
+
+- Shipbreaking with a laser, one layer at a time
+- No timers, no debt, no game over
+- A new wreck for every contract, each with a story
+- Keepsakes to display, a Codex, rooms to make your own
+- Lo-fi radio and Tapes to collect
+- Photo mode, anywhere
+- A horn you can honk for no reason
+- A cat
+
+Please name the cat
+
+A cat has lived at Dock 7 from the start. The cat doesn&#x27;t do anything. The name is up to you. Add the game to your wishlist, and take your time thinking it over.</pre>
+<pre hidden id="t-mail">nangmanindie@gmail.com</pre>
 </body>
 </html>
